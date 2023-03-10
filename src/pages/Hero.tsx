@@ -16,7 +16,7 @@ const Home = () => {
       </section>
 
       {/*--------Desktop Version----*/}
-      <section className="hidden sm:flex pt-96">
+      <section className="hidden sm:flex pt-[200px]">
         <div className="text-10xl w-full leading-none">
           <p className="text-right px-24">frontend</p>
           <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
