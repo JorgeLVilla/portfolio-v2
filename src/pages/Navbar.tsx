@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { RiMenu5Fill } from "react-icons/ri";
+import { RiMenu5Fill, RiCloseFill } from "react-icons/ri";
 import { NAV_LINKS } from "@/assets/data/NavData";
 import { INFO } from "@/assets/data/info";
 
@@ -15,12 +15,12 @@ const Navbar = () => {
   return (
     <nav className="pt-20 pb-5">
       {/*------Desktop Navbar Section----------*/}
-      <section className="flex justify-around">
+      <section className="flex justify-around sm:justify-between sm:px-32">
         <div
           className="text-2xl
           "
         >
-          <Link href={"/"}>Portfolio 2023</Link>
+          <Link href={"/"}>portfolio 2023</Link>
         </div>
         <div className="text-4xl sm:hidden" onClick={handleNavbar}>
           <RiMenu5Fill />
@@ -37,25 +37,28 @@ const Navbar = () => {
       {/*------Open Mobile Navbar----------*/}
       <section
         className={`${
-          navbarOpen
+          !navbarOpen
             ? "hidden"
-            : "block py-10 pr-10 absolute inset-0 h-screen bg-black text-off-white"
+            : "block py-10 absolute inset-0 h-screen bg-black text-off-white"
         }`}
       >
-        <div className="pt-10 text-4xl flex justify-end" onClick={handleNavbar}>
-          <RiMenu5Fill />
+        <div
+          className="pt-10 pr-12 text-4xl flex justify-end"
+          onClick={handleNavbar}
+        >
+          <RiCloseFill />
         </div>
-        <ul className="pt-24">
+        <ul className="pt-12">
           {NAV_LINKS.map((item, index) => (
-            <li className="text-5xl py-3 px-4 uppercase" key={index}>
+            <li className="text-5xl py-4 px-5 uppercase" key={index}>
               <Link href={`${item.path}`}>{item.display}</Link>
             </li>
           ))}
         </ul>
-        <ul className="py-10 px-4">
+        <ul className="py-10 px-5">
           <li className="py-3">{INFO.email}</li>
           <li className="py-2 text-2xl">{INFO.job}</li>
-          <li className="py-2 text-lg">{INFO.location}</li>
+          <li className="py-2">{INFO.location}</li>
         </ul>
       </section>
     </nav>
