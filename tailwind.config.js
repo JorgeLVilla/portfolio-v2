@@ -13,6 +13,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-IBM)']
+      },
+      fontSize: {
+        "10xl": "9rem"
       }
     },
 
