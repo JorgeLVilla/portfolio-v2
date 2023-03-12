@@ -51,7 +51,9 @@ const Navbar = () => {
         <ul className="pt-12">
           {NAV_LINKS.map((item, index) => (
             <li className="text-5xl py-4 px-5 uppercase" key={index}>
-              <Link href={`${item.path}`}>{item.display}</Link>
+              <Link href={`${item.path}`} onClick={handleNavbar}>
+                {item.display}
+              </Link>
             </li>
           ))}
         </ul>

@@ -16,16 +16,16 @@ const Home = () => {
       </section>
 
       {/*--------Desktop Version----*/}
-      <section className="hidden sm:flex pt-[200px]">
+      <section className="hidden sm:flex pt-60">
         <div className="text-10xl w-full leading-none">
-          <p className="text-right px-24">frontend</p>
+          <p className="text-right px-24 sm:-mb-4">frontend</p>
           <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
-          <div className="flex justify-between px-24">
+          <div className="flex justify-between px-24 sm:-mb-4">
             <p>jorge</p>
             <p>developer</p>
           </div>
           <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
-          <p className="px-24">villalobos</p>
+          <p className="px-24 sm:-mb-4">villalobos</p>
           <div className=" h-[1.5px] w-11/12 bg-black mx-auto"></div>
         </div>
       </section>
