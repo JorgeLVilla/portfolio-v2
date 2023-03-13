@@ -4,15 +4,19 @@ import { BsKeyboard } from "react-icons/bs";
 const Home = () => {
   return (
     <main className="">
-      <section className="sm:hidden px-4 py-4">
-        <div className="text-right font py-2 text-6xl">jorge</div>
-        {/* <div className="mt-[-10px] mb-5 h-[1.5px] w-11/12 bg-black mx-auto"></div> */}
-        <div className="text-right font py-2 text-6xl">villalobos</div>
-        {/* <div className="mt-[-10px] mb-5 h-[1.5px] w-11/12 bg-black mx-auto"></div> */}
-        <div className="">
-          <BsKeyboard className="text-9xl mx-auto my-3" />
+      <section className="sm:hidden py-14 flex flex-col justify-center gap-36 ">
+        <div className="text-right font py-2 text-6xl px-4">
+          Jorge Villalobos
         </div>
-        <div className="py-2 text-6xl">front end developer</div>
+        {/* <div className="mt-[-10px] mb-5 h-[1.5px] w-11/12 bg-black mx-auto"></div> */}
+        {/* <div className="text-right font py-2 text-6xl">villalobos</div> */}
+        {/* <div className="mt-[-10px] mb-5 h-[1.5px] w-11/12 bg-black mx-auto"></div> */}
+        <button className="rotate-90 absolute top-50 -right-8 z-99">
+          <p className="border rotate-180 text-lg uppercase p-2 bg-black text-primary">
+            contact me
+          </p>
+        </button>
+        <div className="py-2 text-6xl px-4">Front End Developer</div>
       </section>
 
       {/*--------Desktop Version----*/}

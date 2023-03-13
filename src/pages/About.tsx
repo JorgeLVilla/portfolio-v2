@@ -37,7 +37,7 @@ const About = () => {
             </h1>
             <h1 className="">send me a message</h1>
           </div>
-          <div className="uppercase font-thin text-xl px-4 flex flex-col gap-1 md:items-end md:gap-1 md:text-right items-center md:text-3xl md:w-3/6">
+          <div className="uppercase font-thin text-xl px-4 pt-5 sm:pt-0 flex flex-col gap-1 md:items-end md:gap-1 md:text-right items-center md:text-3xl md:w-3/6">
             <h1>github</h1>
             <h1>behance</h1>
             <h1>linkedin</h1>
