@@ -7,7 +7,7 @@ const Work = () => {
         work & <br></br>projects
       </section>
       <section className="text-4xl sm:text-10xl leading-none">
-        <p className=" sm:uppercase text-2xl py-2 sm:py-0 sm:text-3xl font-thin sm:px-24 sm:text-right">
+        <p className=" sm:uppercase text-4xl py-2 sm:py-0 sm:text-3xl font-thin sm:px-24 sm:text-right">
           click on a project
         </p>
 

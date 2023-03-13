@@ -5,7 +5,7 @@ import { RiMenu5Fill, RiCloseFill } from "react-icons/ri";
 import { NAV_LINKS } from "@/assets/data/NavData";
 import { INFO } from "@/assets/data/info";
 
-const Navbar = () => {
+const BlackNav = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleNavbar = () => {
@@ -33,13 +33,13 @@ const Navbar = () => {
           ))}
         </ul>
       </section>
-      <div className="mt-16 h-[1.5px] w-11/12 bg-black mx-auto"></div>
+      <div className="mt-16 h-[1.5px] w-11/12 bg-primary mx-auto"></div>
       {/*------Open Mobile Navbar----------*/}
       <section
         className={`${
           !navbarOpen
             ? "hidden"
-            : "block py-10 absolute z-1 inset-0 h-screen bg-black text-off-white"
+            : "block py-10 absolute inset-0 h-screen bg-black text-off-white"
         }`}
       >
         <div
@@ -67,4 +67,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BlackNav;
