@@ -15,6 +15,10 @@ const Work = () => {
         </p>
 
         <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
+        <Link href="https://mkgtaxconsultants.com/" target="_blank">
+          <p className="py-2 sm:px-24 sm:pt-8 sm:-mb-4">mkg tax consultants</p>
+        </Link>
+        <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
         <Link href="https://pokedex-app-3fb51.web.app/" target="_blank">
           <p className="py-2 sm:px-24 sm:pt-8 sm:-mb-4">pocketdex</p>
         </Link>
@@ -31,7 +35,10 @@ const Work = () => {
           <p className="py-2 sm:px-24 sm:pt-8 sm:-mb-4">reactoads movie</p>
         </Link>
         <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
-        <Link href="resume">
+        <Link
+          href="https://drive.google.com/file/d/1L21VusMdnbZ1u5QGtU5D1hlmXth06Lfh/view?usp=sharing"
+          target="_blank"
+        >
           <p className="py-2 sm:px-24 sm:pt-8 sm:-mb-4 sm:text-right">resume</p>
         </Link>
         <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
