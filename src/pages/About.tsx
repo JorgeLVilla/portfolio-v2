@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import Link from "next/link";
+import Navbar from "./Navbar";
 
 const About = () => {
+  const [activeTooltip, setActiveTooltip] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("jorgewolftown@gmail.com");
+    setActiveTooltip(true);
+    setTimeout(() => {
+      setActiveTooltip(false);
+    }, 2000);
+  };
+
   return (
     <main className="">
+      <Navbar />
       <section>
         <div className="md:py-10 mb-10">
           <div className="px-10 pt-10 text-xl md:text-3xl font-thin md:w-3/6 md:mx-auto">
@@ -23,12 +36,18 @@ const About = () => {
           </div>
         </div>
         <div className="h-auto flex justify-around px-8 md:font-thin md:justify-center">
-          <div className="z-10 bg-black text-primary rounded-full h-32 sm:h-60 w-32 sm:w-60 md:-mx-5 md:text-3xl border border-black flex justify-center items-center">
+          <Link
+            href="Contact"
+            className="pointer bg-black text-primary rounded-full h-32 sm:h-60 w-32 sm:w-60 md:-mx-5 md:text-3xl border border-black flex justify-center items-center"
+          >
             <p>get in touch</p>
-          </div>
-          <div className="rounded-full h-32 sm:h-60 w-32 sm:w-60 md:-mx-5 md:text-3xl border border-black flex justify-center items-center">
+          </Link>
+          <Link
+            href="Work"
+            className="rounded-full h-32 sm:h-60 w-32 sm:w-60 md:-mx-5 md:text-3xl border border-black flex justify-center items-center"
+          >
             <p>my work</p>
-          </div>
+          </Link>
         </div>
         <div className="py-10 sm:py-18 md:flex md:justify-around md:px-52">
           <div className="text-center md:text-left uppercase font-thin text-xl md:text-3xl md:flex md:flex-col md:justify-between md:w-3/6">
@@ -38,15 +57,25 @@ const About = () => {
             <h1 className="">send me a message</h1>
           </div>
           <div className="uppercase font-thin text-xl px-4 pt-5 sm:pt-0 flex flex-col gap-1 md:items-end md:gap-1 md:text-right items-center md:text-3xl md:w-3/6">
-            <h1>github</h1>
-            <h1>behance</h1>
-            <h1>linkedin</h1>
-            <h1>instagram</h1>
-            <h1>dribble</h1>
+            <Link href="https://github.com/JorgeLVilla">github</Link>
+            <Link href="https://www.behance.net/jorgevillalobos14">
+              behance
+            </Link>
+            <Link href="https://www.linkedin.com/in/jorge-villalobos-04b47b234/">
+              linkedin
+            </Link>
+            <Link href="https://dribbble.com/Jlvilla">facebook</Link>
           </div>
         </div>
-        <div className="text-5xl pb-8">
-          {/* <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div> */}
+        <div
+          onClick={handleCopy}
+          className={`text-5xl pb-8 hover:scale-105 relative cursor-pointer transition ease-in duration-400 after:content-['copied'] after:absolute after:text-[30px]
+          after:text-primary after:top-14 after:right-48 after:bg-black after:px-1 after:rounded ${
+            activeTooltip
+              ? "after:opacity-1"
+              : "after:opacity-0 after:duration-200 after:ease-in-out"
+          }`}
+        >
           <p className="sm:px-24 sm:pt-8 -mb-1 pl-10 md:text-10xl sm:-mb-4 leading-none">
             jorgewolftown
           </p>
