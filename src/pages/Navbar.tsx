@@ -4,6 +4,25 @@ import Image from "next/image";
 import { RiMenu5Fill, RiCloseFill } from "react-icons/ri";
 import { NAV_LINKS } from "@/assets/data/NavData";
 import { INFO } from "@/assets/data/info";
+import { motion, AnimatePresence } from "framer-motion";
+
+const mobileVariant = {
+  hidden: {
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -35,34 +54,39 @@ const Navbar = () => {
       </section>
       <div className="mt-16 h-[1.5px] w-11/12 bg-black mx-auto"></div>
       {/*------Open Mobile Navbar----------*/}
-      <section
-        className={`${
-          !navbarOpen
-            ? "hidden"
-            : "block py-10 absolute z-1 inset-0 h-screen bg-black text-off-white"
-        }`}
-      >
-        <div
-          className="pt-10 pr-12 text-4xl flex justify-end"
-          onClick={handleNavbar}
-        >
-          <RiCloseFill />
-        </div>
-        <ul className="pt-12">
-          {NAV_LINKS.map((item, index) => (
-            <li className="text-5xl py-4 px-5 uppercase" key={index}>
-              <Link href={`${item.path}`} onClick={handleNavbar}>
-                {item.display}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <ul className="py-10 px-5">
-          <li className="py-3">{INFO.email}</li>
-          <li className="py-2 text-2xl">{INFO.job}</li>
-          <li className="py-2">{INFO.location}</li>
-        </ul>
-      </section>
+
+      <AnimatePresence>
+        {navbarOpen && (
+          <motion.div
+            variants={mobileVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="block py-10 fixed z-50 inset-0 h-screen bg-black text-off-white"
+          >
+            <div
+              className="pt-10 pr-12 text-4xl flex justify-end"
+              onClick={handleNavbar}
+            >
+              <RiCloseFill />
+            </div>
+            <ul className="pt-12">
+              {NAV_LINKS.map((item, index) => (
+                <li className="text-5xl py-4 px-5 uppercase" key={index}>
+                  <Link href={`${item.path}`} onClick={handleNavbar}>
+                    {item.display}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="py-10 px-5">
+              <li className="py-3">{INFO.email}</li>
+              <li className="py-2 text-2xl">{INFO.job}</li>
+              <li className="py-2">{INFO.location}</li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
