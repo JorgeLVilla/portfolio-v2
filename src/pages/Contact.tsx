@@ -13,12 +13,12 @@ const Contact = () => {
   };
 
   return (
-    <main className="bg-black h-screen sm:h-auto lg:py-20">
+    <main className="bg-black h-screen sm:h-auto lg:py-14">
       <div className="text-primary bg-black">
         <BlackNav />
       </div>
-      <section className="text-5xl md:text-10xl leading-none text-center py-24 text-primary">
-        let's create<br></br>something<br></br>new together
+      <section className="text-5xl md:text-10xl leading-none text-center py-24 lg:px-20 text-primary">
+        {`let's create something new together`}
       </section>
       <section>
         <div
