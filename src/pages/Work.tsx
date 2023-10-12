@@ -36,7 +36,7 @@ const Work = () => {
         </Link>
         <div className="h-[1.5px] w-11/12 bg-black mx-auto"></div>
         <Link
-          href="https://drive.google.com/file/d/1L21VusMdnbZ1u5QGtU5D1hlmXth06Lfh/view?usp=sharing"
+          href="https://drive.google.com/file/d/1DK6yXtt9cUxd_4Jm7bPV4P0joT7FYaMe/view?usp=sharing"
           target="_blank"
         >
           <p className="py-2 sm:px-24 sm:pt-8 sm:-mb-4 sm:text-right">resume</p>

@@ -12,6 +12,7 @@ const Contact = () => {
     }, 2000);
   };
 
+  //random note trying out vim
   return (
     <main className="bg-black h-screen sm:h-auto lg:py-14">
       <div className="text-primary bg-black">
